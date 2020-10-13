@@ -1,21 +1,19 @@
 [
     {
-        "body": {
-            "auth": "asfsdagsd",
-            "order_id": "5i13539",
-            "external_id": "shipper123",
-            "awb": "CGKBDG1234",
-            "status_date": "2017-01-19T08:22:00+00:00",
-            "internal": {
-                "id": 1,
-                "name": "Order diterima",
-                "description": "Order sudah diterima"
-            },
-            "external": {
-                "id": 1,
-                "name": "Order diterima",
-                "description": "Order sudah diterima"
-            }
+        "auth": "asfsdagsd",
+        "order_id": "5i13539",
+        "external_id": "shipper123",
+        "awb": "CGKBDG1234",
+        "status_date": "2017-01-19T08:22:00+00:00",
+        "internal": {
+            "id": 1,
+            "name": "Order diterima",
+            "description": "Order sudah diterima"
+        },
+        "external": {
+            "id": 1,
+            "name": "Order diterima",
+            "description": "Order sudah diterima"
         }
     }
 ]
