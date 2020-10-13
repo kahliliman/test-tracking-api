@@ -1,0 +1,29 @@
+curl --location --request POST 'http://localhost:5000/api/v1/posts' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "auth" : "test123",
+    "order_id" : "54321ABC",
+    "external_id" : "100",
+    "status_date" : "2020-10-14T00:00:00+00:00",
+    "internal" : {
+        "id" : 1,
+        "name" : "Order masuk sistem",
+        "description" : "Order masuk sistem"
+    },
+    "external" : {
+        "id" : 1,
+        "name" : "Order dipersiapkan",
+        "description" : "Order dipersiapkan"
+    }
+}'
+
+curl --location --request POST 'localhost:5000/api/v1/posts' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "auth" : "test123",
+    "order_id" : "54321ABC",
+    "external_id" : "100",
+    "status_date" : "2020-10-14T00:00:00+00:00"
+}
+
+curl --location --request POST 'localhost:5000/api/v1/posts' \ --header 'Content-Type: application/jason' \ --data-raw '{ "auth": "test", "order_id": "5i13539", "external_id" : "100", "status_date": "2020"}'
