@@ -18,13 +18,8 @@ app.get('/api/v1/posts', (req, res) => {
 
 
 app.post('/api/v1/posts', (req, res) => {
-    const { auth } = req.body;
-
-    const post = { auth }
-
-    posts.push(post);
-
-    res.status(201).json(post);
+    posts.push(req.body);
+    res.status(201).json(req.body);
 });
 
 app.listen(PORT, HOST, () => console.log(`Test Tracking API listening on ${PORT}`));
