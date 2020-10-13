@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
+const HOST = '0.0.0.0';
 const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => res.send('Hello world!'));
 
-app.listen(PORT, () => console.log(`Test Tracking API listening on ${PORT}`));
+app.listen(PORT, HOST, () => console.log(`Test Tracking API listening on ${PORT}`));
