@@ -18,9 +18,9 @@ app.get('/api/v1/posts', (req, res) => {
 
 
 app.post('/api/v1/posts', (req, res) => {
-    const { body } = req.body;
+    const { auth } = req.body;
 
-    const post = { body }
+    const post = { auth }
 
     posts.push(post);
 

@@ -17,7 +17,7 @@ curl --location --request POST 'http://localhost:5000/api/v1/posts' \
     }
 }'
 
-curl --location --request POST 'localhost:5000/api/v1/posts' \
+curl --location --request POST 'https://test-tracking-api.herokuapp.com/api/v1/posts' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "auth" : "test123",
@@ -26,4 +26,41 @@ curl --location --request POST 'localhost:5000/api/v1/posts' \
     "status_date" : "2020-10-14T00:00:00+00:00"
 }
 
-curl --location --request POST 'localhost:5000/api/v1/posts' \ --header 'Content-Type: application/jason' \ --data-raw '{ "auth": "test", "order_id": "5i13539", "external_id" : "100", "status_date": "2020"}'
+curl --location --request POST 'https://test-tracking-api.herokuapp.com/api/v1/posts' \
+--header 'Content-Type: application/json' \ 
+--data-raw '{
+    "body": {
+        "auth":"asfsdagsd","order_id":"5i13539","external_id":"shipper123","awb":"CGKBDG1234","status_date":"2017-01-19T08:22:00+00:00",
+        "internal": {
+            "id":1,
+            "name":"Order diterima","description":"Order sudah diterima"
+        },
+        "external": {
+            "id":1,
+            "name":"Order diterima","description":"Order sudah diterima"
+        }
+    }
+}'
+
+
+curl --location --request POST 'https://test-tracking-api.herokuapp.com/api/v1/posts' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "body": {
+        "auth": "asfsdagsd",
+        "order_id": "5i13539",
+        "external_id": "shipper123",
+        "awb": "CGKBDG1234",
+        "status_date": "2017-01-19T08:22:00+00:00",
+        "internal": {
+            "id": 1,
+            "name": "Order diterima",
+            "description": "Order sudah diterima"
+        },
+        "external": {
+            "id": 1,
+            "name": "Order diterima",
+            "description": "Order sudah diterima"
+        }
+    }
+}'
